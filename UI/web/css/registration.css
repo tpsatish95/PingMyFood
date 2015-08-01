@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url("../img/reg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;   
+}
+
+.heading
+{
+ font-family:'Poiret One', sans-serif;
+ margin-top: -15px;
+}
+.admin_heading{
+    position:absolute;
+}
