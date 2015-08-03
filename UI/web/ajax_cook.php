@@ -28,7 +28,7 @@ if (mysqli_query($mysqli, $insert)) {
     $result = $mysqli->query("select * from cooktable where userid=$id");
 while($row = $result->fetch_array())
 {
-echo $row["dish"] ."^". $row["qty"] ."^". $row["cost"] ."^". $row["aboutfood"]. "#";
+echo $row["dish"] ."^". $row["qty"] ."^". $row["cost"] ."^". $row["aboutfood"].  "#";
 
 }
 } else {

@@ -1,5 +1,5 @@
 <?php
-/*%%SmartyHeaderCode:1244755bde4fcbe8c74_27930375%%*/
+/*%%SmartyHeaderCode:20555be93fb061e06_67611814%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -7,22 +7,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'da54b2893c0ad416770a90ff7248237207340669' => 
     array (
       0 => 'C:\\xampp\\htdocs\\32hourstartup\\web\\templates\\foodiepagefull.tpl',
-      1 => 1438508281,
+      1 => 1438553079,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1244755bde4fcbe8c74_27930375',
+  'nocache_hash' => '20555be93fb061e06_67611814',
   'tpl_function' => 
   array (
   ),
   'version' => '3.1.27',
-  'unifunc' => 'content_55bde5051a8773_66950973',
+  'unifunc' => 'content_55c03a4f8fc8e3_61835640',
   'has_nocache_code' => false,
   'cache_lifetime' => 5,
 ),true);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55bde5051a8773_66950973')) {
-function content_55bde5051a8773_66950973 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55c03a4f8fc8e3_61835640')) {
+function content_55c03a4f8fc8e3_61835640 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,7 @@ function content_55bde5051a8773_66950973 ($_smarty_tpl) {
                         for(var i=0;i<rows.length-1;i++)
                         {
                             var columns = rows[i].split("^");
-                            var row = "<tr><td>"+columns[0]+"</td><td>"+columns[1]+"</td><td>"+columns[2]+"</td><td>";
+                            var row = "<div class='chat-box-name-left' style='font-size:15px;font-weight:bold;'>"+columns[0]+" :</div><div class='chat-box-right'>"+columns[1]+"</div><hr class='hr-clas' />";
                             $("#ret_table").append(row);
                         }                      
                     }
@@ -81,7 +81,8 @@ function content_55bde5051a8773_66950973 ($_smarty_tpl) {
                         for(var i=0;i<rows.length-1;i++)
                         {
                             var columns = rows[i].split("^");
-                            var row = "<tr><td>"+columns[0]+"</td><td>"+columns[1]+"</td><td>"+columns[2]+"</td><td>";
+                            var row = "<div class='chat-box-name-left' style='font-size:15px;font-weight:bold;'>"+columns[0]+" :</div><div class='chat-box-right'>"+columns[1]+"</div><hr class='hr-clas' />";
+                        
                             $("#ret_table").append(row);
                         }                      
                     }
@@ -90,6 +91,27 @@ function content_55bde5051a8773_66950973 ($_smarty_tpl) {
                 obj.send();
             }
             var interval = setInterval(ajaxchathistory,1000);
+            function trendingajax(){
+                var obj = new XMLHttpRequest();
+                obj.onreadystatechange = function(){
+                    if(obj.readyState == 4){
+                        var rows = obj.responseText.split("#");
+                        $("#trend").empty();
+                        //$("#ret_table").append("<tr><th>Dish Name</th><th>Quantity</th><th>Cost</th><th>Description</th></tr>");
+                        for(var i=0;i<rows.length-1;i++)
+                        {
+                            var columns = rows[i].split("^");
+                            if (columns[0] == "general" || columns[0] == "")
+                                continue
+                            var row = "<button class='btn btn-primary' type='button' style='background-color:#16a085;'>"+columns[0]+" <span class='badge' style='border-radius=50px;'> "+columns[1]+"</span></button><br/><br/>";
+                            $("#trend").append(row);
+                        }                      
+                    }
+                }
+                obj.open("GET","trendingloader.php",true);
+                obj.send();
+            }
+            setInterval(trendingajax,1000);
       </script>
     
     
@@ -110,92 +132,55 @@ function content_55bde5051a8773_66950973 ($_smarty_tpl) {
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Features <b class=" icon-angle-down"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="components.html">Components</a></li>
-								<li><a href="pricingbox.html">Pricing box</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="#">Home</a></li>
+                        
+                        <li><a href="#chat_trend">Chat and trend</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 	</header>
 	<!-- end header -->
-	<section id="featured">
+	
 	<!-- start slider -->
-<div class="container">
-   <section id="content">
-	<div class="container">
-		<div class="row">
+<div class="container" style="width:100%;padding:0px;">
+    <div id="home">
+   <section id="content" >
+	<div class="container" style="padding:0px;">
+		<div class="row" style="margin-top:150px;">
 			<div class="col-lg-12">
 				<div class="row" id="cooksDetails">
 				</div>
 			</div>
 		</div>
-		<!-- divider -->
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="solidline">
-				</div>
-			</div>
-		</div>
-		<!-- end divider -->
-		<!-- Portfolio Projects -->
-		<div class="row">
-			<div class="col-lg-12">
-				<h4 class="heading">Recent Works</h4>
-				
-
-	</div>
-	</section>
-</div>
-
+		
 	
-
+	
+       </div>
 	</section>
+        </div>
+    <a name="chat_trend"></a>   
 	<section class="callaction">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="big-cta">
 					<div class="cta-text">
-						<h2><span>Moderna</span> HTML Business Template</h2>
+						<h2><span>Chat</span> and <span>Trending</span> food items</h2>
 					</div>
 				</div>
 			</div>
              <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6" style="margin-top: 60px;">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <span class="glyphicon glyphicon-comment"></span> Chat
-                    <div class="btn-group pull-right">
-                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </button>
-                        <ul class="dropdown-menu slidedown">
-                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-refresh">
-                            </span>Refresh</a></li>
-                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok-sign">
-                            </span>Available</a></li>
-                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-remove">
-                            </span>Busy</a></li>
-                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-time"></span>
-                                Away</a></li>
-                            <li class="divider"></li>
-                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-off"></span>
-                                Sign Out</a></li>
-                        </ul>
-                    </div>
+                    
                 </div>
                 <div class="panel-body">
-                    <ul class="chat" id="ret_table">
+                    <ul class="chat" id="ret_table" style="color: black;">
                       
                     
                         
@@ -212,68 +197,58 @@ function content_55bde5051a8773_66950973 ($_smarty_tpl) {
                 </div>
             </div>
         </div>
+                 
+                 
+                <div class="col-md-6" style="margin-top: 60px;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Trending
+                    
+                </div>
+                <div class="panel-body">
+                    <ul class="chat" id="trend" style="color: black;">
+                    </ul>
+                </div>
+                
+            </div>
+        </div> 
     </div>
 		</div>
 	</div>
 	</section>
 	
-	<footer>
-	<div class="container">
+	
+	<div class="container" style="margin-top:50px">
+        <a name="contact"></a>
 		<div class="row">
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Get in touch with us</h5>
-					<address>
-					<strong>Moderna company Inc</strong><br>
-					 Modernbuilding suite V124, AB 01<br>
-					 Someplace 16425 Earth </address>
-					<p>
-						<i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
-						<i class="icon-envelope-alt"></i> email@domainname.com
+			<div class="col-lg-12 col-lg-push-5">
+				
+                <h1 class="widgetheading"><span style="color:#68A4C4;">Contact</span> us</h1></div>
+			<div class="col-lg-6" style="margin-top: 50px;">	
+            <div class="widget">	
+                <address style="color:black">
+					<strong>OutofTheblue Inc</strong><br>
+					 SSN CE<br>
+					 Earth </address>
+					<p style="color:black";>
+						<i class="icon-phone"></i> +91 9488515784<br>
+						<i class="icon-envelope-alt"></i> admin@outoftheblue.com
 					</p>
 				</div>
+            </div>
 			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Pages</h5>
-					<ul class="link-list">
-						<li><a href="#">Press release</a></li>
-						<li><a href="#">Terms and conditions</a></li>
-						<li><a href="#">Privacy policy</a></li>
-						<li><a href="#">Career center</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Latest posts</h5>
-					<ul class="link-list">
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-						<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-						<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Flickr photostream</h5>
-					<div class="flickr_badge">
-						<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
-					</div>
-					<div class="clear">
-					</div>
-				</div>
-			</div>
+			
+			
 		</div>
 	</div>
+       <footer>
 	<div id="sub-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="copyright">
 						<p>
-							<span>&copy; Moderna 2014 All right reserved. By </span><a href="http://bootstraptaste.com" target="_blank">Bootstraptaste</a>
+							<span>Made with &lt3 by OutofTheblue Inc&copy;  2015 All right reserved. By </span><a href="#">OutofTheblue Inc</a>
 						</p>
 					</div>
 				</div>
@@ -318,17 +293,99 @@ obj.onreadystatechange = function(){
             var rows = cooks[i].split("#");
             for(var j=0;j<rows.length-1;j++){
                 var columns = rows[j].split("^");
-                $("#cooksDetails").append('<div class="col-lg-3"><div class="box"><div class="box-gray aligncenter"><h4>'+columns[0]+'</h4><div class="icon"><i class="fa fa-pagelines fa-3x"></i></div><p>I can cook.</p></div><div class="box-bottom"><a href="#">Learn more</a></div></div></div>');
+                var c = parseInt(columns[6]);
+                var cc = parseInt(columns[7]);
+                var star1 = '<div class="rating">';
+                for(var ci =0 ; ci < c ; ci++)
+                star1 += '<span>☆</span>';
+                star1 += '</div>';
+                
+ var star2 = '<div class="rating">';
+                for(var ci =0 ; ci < cc ; ci++)
+                star2 += '<span>☆</span>';
+                star2 += '</div>';
+                
+                $("#cooksDetails").append('<div class="col-lg-3 col-md-6" style="margin-top:15px;"><div class="box"><div class="box-gray aligncenter"><h4>'+columns[0]+'</h4><p>'+star1+'</p><div class="icon"><i class="glyphicon glyphicon-cutlery fa-4x"></i></div><p>'+columns[5]+star2+'</p></div><div class="box-bottom"><input type="button" class="trans_button" id="button'+j.toString()+'" value="Write a review" onclick="review(\''+columns[5]+'\',\''+columns[0]+'\')"></input></div></div></div>');
             }
+            
             /*var row = "<tr><td>"+columns[0]+"</td><td>"+columns[1]+"</td><td>"+columns[2]+"</td><td>"+columns[3]+"</td></tr>";
             $("#cooksDetails").append(row);*/
         }                    
 
     }
 }
-obj.open("GET","getcooks.php?locale="+'kknagar',true);
+
+obj.open("GET","getcooks.php?locale="+'tmb',true);
 obj.send();
 </script>
+        <script type="text/javascript">
+             function review(user,food){
+                $(".container").css('opacity','0.3');
+                var f = document.createElement("form");
+                f.setAttribute('role','form');
+                f.setAttribute('method',"post");
+                f.setAttribute('action',"submitreview.php");
+                f.setAttribute('class','reviewclass'); 
+                var div = document.createElement("div");
+                div.setAttribute("class","form-group");
+                 
+                var name = document.createElement("input"); //input element, text
+                name.setAttribute('type',"text");
+                name.setAttribute('disabled','true');
+                name.setAttribute('value',user);
+                name.setAttribute('name',"dummyname");
+                name.setAttribute('class','form-control');
+                
+                var name1 = document.createElement("input"); //input element, text
+                name1.setAttribute('type',"hidden");
+                name1.setAttribute('value',user);
+                name1.setAttribute('name',"username");
+                
+                var div1 = document.createElement("div");
+                div1.setAttribute("class","form-group");
+                 
+                var dish = document.createElement("input"); //input element, text
+                dish.setAttribute('type',"text");
+                dish.setAttribute('disabled','true');
+                dish.setAttribute('value',food);
+                dish.setAttribute('name',"dummydish");
+                dish.setAttribute('class','form-control');
+                
+                var dish1 = document.createElement("input"); //input element, text
+                dish1.setAttribute('type',"hidden");
+                dish1.setAttribute('value',food);
+                dish1.setAttribute('name',"dish");
+                
+                var div2 = document.createElement("div");
+                div2.setAttribute("class","form-group");
+                 
+                var review = document.createElement("textarea"); //input element, text
+                review.setAttribute('placeholder',"write a review");
+                review.setAttribute('name',"review");
+                review.setAttribute('class','form-control');
+                
+                var div3 = document.createElement("div");
+                div3.setAttribute("class","form-group");
+                var submit = document.createElement("input"); //input element, Submit button
+                submit.setAttribute('type',"submit");
+                submit.setAttribute('value',"Submit");
+                submit.setAttribute('class','btn btn-primary');
+                
+                f.appendChild(div);
+                f.appendChild(div1);
+                f.appendChild(div2);
+                f.appendChild(div3);
+                div.appendChild(name);
+                div1.appendChild(dish);
+                f.appendChild(name1);
+                f.appendChild(dish1);
+                div2.appendChild(review);
+                div3.appendChild(submit);
+                 
+                document.getElementsByTagName('body')[0].appendChild(f);
+
+             }
+        </script>
 </body>
 </html><?php }
 }

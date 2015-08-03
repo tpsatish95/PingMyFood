@@ -111,7 +111,8 @@ ul.clients li:hover {
 
 /* box */
 .box-bottom {
-	background:#68A4C4;
+	    background: rgba(228, 228, 228, 0.86);
+
 }
 
 /* buttons */

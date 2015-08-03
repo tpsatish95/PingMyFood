@@ -49,11 +49,12 @@
 				<div class="col-lg-6 col-lg-offset-3">
 					
 					<p><select class="form-control" id="locality">
-                        <option value="annanagar">anna nagar</option>
-                        <option value="kknagar">kk nagar</option>
-                        <option value="tmb">tambaram</option>
-                        <option value="gdy">guindy</option>
-                        <option value="tngr">tnagar</option>
+                        <option value="annanagar">Choose a Location</option>
+                        <option value="annanagar">Anna Nagar</option>
+                        <option value="kknagar">KK Nagar</option>
+                        <option value="tmb">Tambaram</option>
+                        <option value="gdy">Guindy</option>
+                        <option value="tngr">Tnagar</option>
                         </select></p>
 				</div>
 				<br>

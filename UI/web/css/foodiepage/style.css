@@ -14,13 +14,44 @@
 /* ===================================
 1. General
 ==================================== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.reviewclass{
+    position: absolute;
+    float: left;
+    top: 400px;
+    left: 600px;
+
+}
+#home
+{
+
+    background: url(../../img/header-bg.jpg);
+    /*background-color: #222;*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0   
+}
+
+.rating > span:before {
+   content: "\2605";
+   position: absolute;
+}
 
 body {
 	font-family:'Open Sans', Arial, sans-serif;
 	font-size:14px;
 	font-weight:300;
 	line-height:1.6em;
-	color:#656565;
+	color:#FBFAFA;
 }
 
 a:active {
@@ -305,6 +336,18 @@ ul.nav li.dropdown a {
 /* ===================================
 5. Section: Featured
 ==================================== */
+.trans_button
+{
+    background-color: rgba(53, 34, 34, 0);
+    border: 0px;
+    font-size: 20px;
+}
+
+h4
+{
+ color: white;
+}
+
 
 #featured{
 	width: 100%;
@@ -350,7 +393,7 @@ section.callaction {
 
 #content {
 	position:relative;
-	background:#fff;
+	/*background:#fff;*/
 	padding:50px 0 40px 0;
 }
 
@@ -377,7 +420,7 @@ section.callaction {
 	width: 100%;
 }
 .box-gray  {
-	background: #f8f8f8;
+	background: rgba(0, 0, 0, 0.51);
 	padding: 20px 20px 30px;
 }
 .box-gray  h4,.box-gray  i {

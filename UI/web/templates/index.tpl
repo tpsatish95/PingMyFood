@@ -41,17 +41,17 @@
           <h1 id="tra_head" style="color:rgb(0, 0, 0);font-weight: bold;font-size:100px;">Ping my Food !</h1>
           </div>
           <div class="col-lg-12 col-lg-push-7">
-          <h1 id="tra_head" style="color:rgb(0, 0, 0);font-weight: bold;font-size:20px;">-The Food Network</h1>
+          <h1 id="tra_head" style="color:rgb(64, 66, 33);font-weight: bold;font-size:32px;">-The Food Network</h1>
           </div>
         </div>
-      <div class="row" style="margin-top:141px">
+      <div class="row" style="margin-top:100px">
           
           <div class="col-md-12">
       <form class="form-signin" action="authenticate.php" method="post">
         
         <input type="text" id="username" name="username" class="form-control" value="" placeholder="Username" required autofocus>
         
-        <input type="password" id="inputPassword" name="password" class="form-control" value="" placeholder="Password" required>
+        <input type="password" id="inputPassword" style="margin-top: 10px;" name="password" class="form-control" value="" placeholder="Password" required>
           
           <div class="checkbox">
           <label style="color:whitesmoke;">

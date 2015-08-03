@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-08-02 10:48:02
+<?php /* Smarty version 3.1.27, created on 2015-08-02 23:10:07
          compiled from "C:\xampp\htdocs\32hourstartup\web\templates\foodiepage.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:292955bdd942a69109_31109067%%*/
+/*%%SmartyHeaderCode:2017255be872f003de7_36873502%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7000910da321f43f5a9bf7002b777edf6a235afa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\32hourstartup\\web\\templates\\foodiepage.tpl',
-      1 => 1438505273,
+      1 => 1438546413,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '292955bdd942a69109_31109067',
+  'nocache_hash' => '2017255be872f003de7_36873502',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_55bdd942a9fae7_09534848',
+  'unifunc' => 'content_55be872f0422c4_19351385',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55bdd942a9fae7_09534848')) {
-function content_55bdd942a9fae7_09534848 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55be872f0422c4_19351385')) {
+function content_55be872f0422c4_19351385 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '292955bdd942a69109_31109067';
+$_smarty_tpl->properties['nocache_hash'] = '2017255be872f003de7_36873502';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,11 +83,12 @@ $_smarty_tpl->properties['nocache_hash'] = '292955bdd942a69109_31109067';
 				<div class="col-lg-6 col-lg-offset-3">
 					
 					<p><select class="form-control" id="locality">
-                        <option value="annanagar">anna nagar</option>
-                        <option value="kknagar">kk nagar</option>
-                        <option value="tmb">tambaram</option>
-                        <option value="gdy">guindy</option>
-                        <option value="tngr">tnagar</option>
+                        <option value="annanagar">Choose a Location</option>
+                        <option value="annanagar">Anna Nagar</option>
+                        <option value="kknagar">KK Nagar</option>
+                        <option value="tmb">Tambaram</option>
+                        <option value="gdy">Guindy</option>
+                        <option value="tngr">Tnagar</option>
                         </select></p>
 				</div>
 				<br>

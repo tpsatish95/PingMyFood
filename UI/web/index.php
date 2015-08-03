@@ -18,6 +18,6 @@ unset($_SESSION["signInError"]);
 if(!isset($_SESSION["role"]))
     $smarty->display('index.tpl');
 else
-    header("Location: test.html");
+    echo "error page coming soon (:";
     
 ?>

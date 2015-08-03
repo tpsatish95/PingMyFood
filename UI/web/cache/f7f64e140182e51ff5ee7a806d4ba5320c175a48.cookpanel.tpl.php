@@ -16,13 +16,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
   'version' => '3.1.27',
-  'unifunc' => 'content_55bdd63c564be7_86854966',
+  'unifunc' => 'content_55c0396110faa0_89233442',
   'has_nocache_code' => false,
   'cache_lifetime' => 5,
 ),true);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55bdd63c564be7_86854966')) {
-function content_55bdd63c564be7_86854966 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55c0396110faa0_89233442')) {
+function content_55c0396110faa0_89233442 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -256,7 +256,7 @@ function content_55bdd63c564be7_86854966 ($_smarty_tpl) {
                                               </div>                                              
                                               
                                               <div class="bio-row">
-                                                  <p><span>Address </span>: 65,12th cross, senthil nagar, kolathur</p>
+                                                  <p><span>Address </span>: 123, ssn ce, gh1</p>
                                               </div>
                                               <div class="bio-row">
                                                   <p><span>Role </span>: cook</p>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-08-02 01:33:57
+<?php /* Smarty version 3.1.27, created on 2015-08-02 22:55:09
          compiled from "C:\xampp\htdocs\32hourstartup\web\templates\registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:196855bd5765142a59_02402057%%*/
+/*%%SmartyHeaderCode:2220055be83ad50e189_97147548%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27bfc99b7daaf41ff7066fd141f08edc0dfcdbd4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\32hourstartup\\web\\templates\\registration.tpl',
-      1 => 1438471872,
+      1 => 1438548906,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '196855bd5765142a59_02402057',
+  'nocache_hash' => '2220055be83ad50e189_97147548',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_55bd576518b271_91502828',
+  'unifunc' => 'content_55be83ad5589d3_87392626',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55bd576518b271_91502828')) {
-function content_55bd576518b271_91502828 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55be83ad5589d3_87392626')) {
+function content_55be83ad5589d3_87392626 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '196855bd5765142a59_02402057';
+$_smarty_tpl->properties['nocache_hash'] = '2220055be83ad50e189_97147548';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,40 +76,40 @@ $_smarty_tpl->properties['nocache_hash'] = '196855bd5765142a59_02402057';
         <div class="container"> 
          <div class="row">
           <div class="col-lg-12 col-lg-push-4 col-xs-12 heading">
-           <h1 class="admin_heading" style="color:rgb(0, 0, 0); font-size: 50px; font-weight: 800;">Registration Page</h1>
+           <h1 class="admin_heading" style="color:white; font-size: 50px; font-weight: 800;">Registration Page</h1>
           </div>
          </div>
             <br>
             <form action="store.php" method="post">
             <div class="row" style="margin-top: 88px;">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">      Name           </pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">      Name           </pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="name" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;"> User Name</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;"> User Name</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="username" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">  Password</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">  Password</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="password" name="password" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">   Address</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">   Address</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
                 <textarea name="address" required="required" placeholder="" class="form-control" style="max-height:100px;min-height:100px; resize: none"></textarea>
             </div>
             </div>
@@ -117,37 +117,47 @@ $_smarty_tpl->properties['nocache_hash'] = '196855bd5765142a59_02402057';
                 
                 <div class="row">
              <div class="col-lg-3 col-lg-push-2">
-             <pre style="font-size:22px;color:black;font-weight: bold;">      Locality</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">      Locality</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
-            <input type="text" name="locality" required="required" placeholder="" class="form-control" style="width:43%;">
+            <div class="col-lg-6 col-lg-push-2">    
+            	<select name = "locality" class="form-control">
+                        <option  value="annanagar">Choose a Location</option>
+                        <option value="annanagar">Anna Nagar</option>
+                        <option value="kknagar">KK Nagar</option>
+                        <option  value="tmb">Tambaram</option>
+                        <option  value="gdy">Guindy</option>
+                        <option value="tngr">Tnagar</option>
+                        </select>
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-2">
-             <pre style="font-size:22px;color:black;font-weight: bold;">      Phone Number</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">      Phone Number</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="phone" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">  Email-id</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">  Email-id</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="email" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-2">
-             <pre style="font-size:22px;color:black;font-weight: bold;">    Account Status</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">    Account Status</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3" style="color: black;font-weight: bold;">    
-            <input type="radio" name="type" value="cook">Cook<br>
-            <input type="radio" name="type" value="foodie">Foodie<br>
-            <input type="radio" name="type" value="charity">Charity and Orphanage<br>
-            <input type="radio" name="type" value="eventorg">Event Organisers    
+            <div class="col-lg-6 col-lg-push-2" style="color: black;font-weight: bold;">    
+            		<select name ="type" class="form-control">
+                        <option  value="cook">Cook</option>
+                        <option value="foodie">Foodie</option>
+                        <option  value="charity">Charity</option>
+                        <option  value="eventorg">Event Organisers</option>
+                
+                        </select>   
             </div>
             </div>
                

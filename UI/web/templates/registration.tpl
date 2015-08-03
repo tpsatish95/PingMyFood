@@ -36,40 +36,40 @@
         <div class="container"> 
          <div class="row">
           <div class="col-lg-12 col-lg-push-4 col-xs-12 heading">
-           <h1 class="admin_heading" style="color:rgb(0, 0, 0); font-size: 50px; font-weight: 800;">Registration Page</h1>
+           <h1 class="admin_heading" style="color:white; font-size: 50px; font-weight: 800;">Registration Page</h1>
           </div>
          </div>
             <br>
             <form action="store.php" method="post">
             <div class="row" style="margin-top: 88px;">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">      Name           </pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">      Name           </pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="name" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;"> User Name</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;"> User Name</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="username" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">  Password</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">  Password</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="password" name="password" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">   Address</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">   Address</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
                 <textarea name="address" required="required" placeholder="" class="form-control" style="max-height:100px;min-height:100px; resize: none"></textarea>
             </div>
             </div>
@@ -77,37 +77,47 @@
                 
                 <div class="row">
              <div class="col-lg-3 col-lg-push-2">
-             <pre style="font-size:22px;color:black;font-weight: bold;">      Locality</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">      Locality</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
-            <input type="text" name="locality" required="required" placeholder="" class="form-control" style="width:43%;">
+            <div class="col-lg-6 col-lg-push-2">    
+            	<select name = "locality" class="form-control">
+                        <option  value="annanagar">Choose a Location</option>
+                        <option value="annanagar">Anna Nagar</option>
+                        <option value="kknagar">KK Nagar</option>
+                        <option  value="tmb">Tambaram</option>
+                        <option  value="gdy">Guindy</option>
+                        <option value="tngr">Tnagar</option>
+                        </select>
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-2">
-             <pre style="font-size:22px;color:black;font-weight: bold;">      Phone Number</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">      Phone Number</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="phone" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-3">
-             <pre style="font-size:22px;color:black;font-weight: bold;">  Email-id</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">  Email-id</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3">    
+            <div class="col-lg-6 col-lg-push-2">    
             <input type="text" name="email" required="required" placeholder="" class="form-control" style="width:43%;">
             </div>
             </div>
             <div class="row">
              <div class="col-lg-3 col-lg-push-2">
-             <pre style="font-size:22px;color:black;font-weight: bold;">    Account Status</pre>
+             <pre style="font-size:22px;color:white;font-weight: bold;">    Account Status</pre>
              </div>
-            <div class="col-lg-6 col-lg-push-3" style="color: black;font-weight: bold;">    
-            <input type="radio" name="type" value="cook">Cook<br>
-            <input type="radio" name="type" value="foodie">Foodie<br>
-            <input type="radio" name="type" value="charity">Charity and Orphanage<br>
-            <input type="radio" name="type" value="eventorg">Event Organisers    
+            <div class="col-lg-6 col-lg-push-2" style="color: black;font-weight: bold;">    
+            		<select name ="type" class="form-control">
+                        <option  value="cook">Cook</option>
+                        <option value="foodie">Foodie</option>
+                        <option  value="charity">Charity</option>
+                        <option  value="eventorg">Event Organisers</option>
+                
+                        </select>   
             </div>
             </div>
                

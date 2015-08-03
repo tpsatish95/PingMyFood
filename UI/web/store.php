@@ -19,8 +19,7 @@ $insert = "insert into users (name,username,password,address,locality,phno,email
 values ('$name','$username','$password','$address','$locality','$phone','$email','$type')";
 
 if (mysqli_query($mysqli, $insert)) {
-    echo "Registration Successful\n";
-    
+   header("Location: index.php");
 } else {
     echo "Please enter a valid username<br>";
     

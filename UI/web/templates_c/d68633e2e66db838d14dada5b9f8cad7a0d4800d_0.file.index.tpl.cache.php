@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-08-01 08:33:01
+<?php /* Smarty version 3.1.27, created on 2015-08-02 22:58:50
          compiled from "C:\xampp\htdocs\32hourstartup\web\templates\index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:751555bc681d9e2430_15677821%%*/
+/*%%SmartyHeaderCode:129955be848a6b66b8_20630042%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd68633e2e66db838d14dada5b9f8cad7a0d4800d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\32hourstartup\\web\\templates\\index.tpl',
-      1 => 1438410780,
+      1 => 1438545490,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '751555bc681d9e2430_15677821',
+  'nocache_hash' => '129955be848a6b66b8_20630042',
   'variables' => 
   array (
     'rows' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_55bc681da3eb60_43970113',
+  'unifunc' => 'content_55be848a7afd89_18737234',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55bc681da3eb60_43970113')) {
-function content_55bc681da3eb60_43970113 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55be848a7afd89_18737234')) {
+function content_55be848a7afd89_18737234 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '751555bc681d9e2430_15677821';
+$_smarty_tpl->properties['nocache_hash'] = '129955be848a6b66b8_20630042';
 ?>
 
 
@@ -84,17 +84,17 @@ $_smarty_tpl->properties['nocache_hash'] = '751555bc681d9e2430_15677821';
           <h1 id="tra_head" style="color:rgb(0, 0, 0);font-weight: bold;font-size:100px;">Ping my Food !</h1>
           </div>
           <div class="col-lg-12 col-lg-push-7">
-          <h1 id="tra_head" style="color:rgb(0, 0, 0);font-weight: bold;font-size:20px;">-The Food Network</h1>
+          <h1 id="tra_head" style="color:rgb(64, 66, 33);font-weight: bold;font-size:32px;">-The Food Network</h1>
           </div>
         </div>
-      <div class="row" style="margin-top:141px">
+      <div class="row" style="margin-top:100px">
           
           <div class="col-md-12">
       <form class="form-signin" action="authenticate.php" method="post">
         
         <input type="text" id="username" name="username" class="form-control" value="" placeholder="Username" required autofocus>
         
-        <input type="password" id="inputPassword" name="password" class="form-control" value="" placeholder="Password" required>
+        <input type="password" id="inputPassword" style="margin-top: 10px;" name="password" class="form-control" value="" placeholder="Password" required>
           
           <div class="checkbox">
           <label style="color:whitesmoke;">
