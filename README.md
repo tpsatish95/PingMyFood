@@ -12,3 +12,7 @@ To harness the huge amount of data available with machine learning techniques an
  * Locally trending food
  * Automated scoring of cooks and food items
  * Food recommender system 
+ 
+ ## Business Model
+ 
+![Business Model](https://raw.githubusercontent.com/tpsatish95/PingMyFood/master/The%20Business%20Model%20Canvas.jpg)
